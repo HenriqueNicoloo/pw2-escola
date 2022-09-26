@@ -1,7 +1,8 @@
-package entity;
+package br.com.etechoracio.pw2escola.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -14,7 +15,7 @@ import lombok.Setter;
 @Entity
 @Table (name = "ALUNO")
 public class Aluno {
-
+	@Id
 	@Column (name = "IDALUNO")
 	private int IdAluno;
 	
@@ -29,5 +30,5 @@ public class Aluno {
 	
 	@JoinColumn (name = "ID_CURSO")
 	@ManyToOne
-	private int Id_Curso;
+	private Curso Id_Curso;
 }
